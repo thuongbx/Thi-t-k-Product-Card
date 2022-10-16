@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Roboto:wght@300;400;500;700&display=swap');
+:root {
+    --primary-color: #4daf54;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #4daf54, #3d8880);
+    font-family: "poppins";
+}
+
+.card {
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background-color: #272d40;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.card__heart,
+.card__cart {
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.card__cart {
+    left: unset;
+    right: 20px;
+}
+
+.card__img {
+    width: 75%;
+    height: 160px;
+    margin: 0 auto;
+    transition: .4s;
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__title,
+.card__price {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: .4s;
+}
+
+.card__title {
+    color: var(--primary-color);
+}
+
+.card__size,
+.card__color {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card__size h3 {
+    margin-right: 8px;
+}
+
+.card__size span {
+    margin: 0 8px;
+    padding: 1px 6px;
+    background-color: antiquewhite;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card__color h3 {
+    margin-right: 4px;
+}
+
+.card__color span {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.card__color--green {
+    background-color: green;
+}
+
+.card__color--red {
+    background-color: red;
+}
+
+.card__color--blue {
+    background-color: blue;
+}
+
+.card__color--black {
+    background-color: black;
+}
+
+.card__color--yellow {
+    background-color: yellow;
+}
+
+.card__color--white {
+    background-color: white;
+}
+
+.card__action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__action button {
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: .3s;
+}
+
+.card__action button:hover {
+    transform: scale(.9);
+    cursor: pointer;
+}
+
+.card:hover .card__img {
+    transform: translateY(-90px) rotate(20deg);
+}
+
+.card:hover .card__title {
+    transform: translate(-32px, -70px);
+}
+
+.card:hover .card__price {
+    transform: translate(-118px, -70px);
+}
+
+.card__size {
+    margin-top: 150px;
+}
+
+.card__size,
+.card__color,
+.card__action {
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+    transition-delay: .4s;
+}
+
+.card:hover .card__size,
+.card:hover .card__color,
+.card:hover .card__action {
+    visibility: visible;
+    opacity: 100;
+}
+
+.card:hover .card__size {
+    margin-top: -30px;
+}
